@@ -13,13 +13,14 @@ ________________________________________________________________________________
 chmod +x general_crawler.py
 
 运行代码（示例）：
-
+```bash
 python3 general_crawler.py "https://www.china.com" -v
-
+```
 如果你比较贪心, 想跨域名及大量爬行网页连接来获取更多邮箱, 可以使用以下疯狂模式 (对服务器CPU及内存配置要求更高, 而且长时间在同一网站爬行被封IP风险也会增加)
-
+```bash
 python3 general_crawler.py "https://www.china.com" -v -t 2000 -d 1000 -m 100000000 -p 100000000 --ignore-ssl --cross-domain
-
+```
+```bash
 usage: general_crawler.py [-h] [-d DELAY] [-m MAX_DEPTH] [-p MAX_PAGES] [-v] [--ignore-ssl] [--cookie COOKIE] [--cookie-mode {all,login-only,browsing-only}] [--cookie-frequency COOKIE_FREQUENCY]
                           [--no-frames] [--no-dynamic] [--cross-domain] [-t TIMEOUT]
                           url
@@ -49,7 +50,7 @@ options:
   --cross-domain        允许跨域爬取（默认禁用）
   -t TIMEOUT, --timeout TIMEOUT
                         超时时间(毫秒)，默认2000ms（2秒），例如 -t 3000 表示3秒
-
+```
 
 
 
